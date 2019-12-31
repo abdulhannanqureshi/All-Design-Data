@@ -1,0 +1,56 @@
+﻿meta：
+<script type="text/javascript" src="路径/jquery.customSelect.min.js"></script>
+
+js：
+<script type="text/javascript">
+	$(function(){
+		$('.customSelect').customSelect();
+	});
+</script>
+
+css:
+.selectWrap {
+  position: relative;
+  height: 25px;
+}
+.selectWrap span.customSelect {
+  width: 120px;
+}
+
+span.customSelect {
+  font-size: 13px;
+  background-color: #F8F8F8;
+  color: #333;
+  padding: 0 6px 0 15px;
+  border: 1px solid #C7C7C7;
+  line-height: 25px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.customSelectInner {
+  background: url(customselect_arrow.png) no-repeat center right;
+  padding: 0 9px 0 0;
+  width: 100% !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html：
+<div class="selectWrap">
+	<select class="customSelect">
+		<option>人数をお選び下さい</option>
+		<option>1人</option>
+		<option>2人</option>
+		<option>3人</option>
+		<option>4人</option>
+		<option>5人以上</option>
+	</select>
+</div>

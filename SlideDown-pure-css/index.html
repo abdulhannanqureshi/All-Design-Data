@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bootstrap.js"></script>
+<style>
+.slider {
+	overflow-y: hidden;
+    max-height: 200px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -moz-transition-property: all;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -ms-transition-property: all;
+    -ms-transition-duration: .5s;
+    -ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    background: pink;
+    height: 200px;
+    width: 200px;
+}
+.slider:hover {
+	max-height: 0;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div class="warr-hover">
+		
+		<div class="slider">
+			Some content heresaasasasas....
+		</div>
+	</div>
+</div><!-- /#wrapper -->
+<script>
+	$(document).ready(function(){
+		function loader(){
+			$(".loading-screen-wrapper").fadeOut(300);
+		}
+		setTimeout(loader, 3000);
+	});
+</script>
+</body>
+</html>

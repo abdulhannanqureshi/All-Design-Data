@@ -1,0 +1,536 @@
+@charset "UTF-8";
+
+/* !Reseting
+---------------------------------------------------------- */
+input, textarea
+{ margin: 0; font-size: 100%;}
+table
+{ border-collapse: collapse; border-spacing: 0; font-size: 100%;}
+ol, ul
+{ list-style: none;}
+/* !Clearfix
+---------------------------------------------------------- */
+.clearfix {
+	display: block;
+	min-height: 1%;
+}
+.clearfix:after {
+	clear: both;
+	content:".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+* html .clearfix {
+	height: 1%;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+.visiblePC {
+	display: block;
+}
+.visibleTS {
+	display: none;
+}
+@media screen and (max-width: 991px) {
+.visibleTS {
+	display: block;
+}
+.visiblePC {
+	display: none;
+}
+}
+@media screen and (max-width: 1199px) {
+#wrapper .container{
+	width:100%;
+}
+}
+/* !wrapper
+---------------------------------------------------------- */
+#wrapper h1,#wrapper h2,#wrapper h3,#wrapper h4{
+	margin:0;
+}
+#wrapper {
+	min-width:320px;
+	background:rgba(14, 19, 30, 0.6);
+	padding:60px 0 120px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	z-index:99999;
+	font-family: "campton",! sans-serif important;s
+}
+#innerWrap{
+	max-width:1124px;
+	margin:0 auto 0;
+	background:#fff;
+}
+/* !header
+---------------------------------------------------------- */
+#headerLogo {
+	background:#242b3a url(../img/bg_gear.png) no-repeat scroll 0 0; 
+	padding:30px 0 0 40px;
+	min-height:184px;
+}
+#headerLinks {
+	position:relative;
+	background:#3a4356 url(../img/bg_gear1.png) no-repeat scroll right top;
+	padding:30px 0 0 36px;
+	color:#fff;
+	min-height:184px;
+}
+#headerLinks:after{
+	position: absolute;
+	content:"";
+	top:38px;
+	right:38px;
+	cursor:pointer;
+	z-index:9999;
+	width:10px;
+	height:10px;
+	background:url(../img/icon_close.png);
+}
+#headerLinks h2{
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:24px;
+	line-height:28px;
+}
+#headerLinks h2 span{
+	font-weight:normal;
+}
+#headerLinks .deviceName{
+	padding-left:48px;
+	background:url(../img/icon_mobile.png) no-repeat scroll 0 0; 
+}
+#headerLinks .deviceName{
+	font-size:13px;
+	line-height:14px;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin-top:14px;
+}
+#headerLinks .deviceName span{
+	font-size:28px;
+	line-height:36px;
+	display:block;
+	font-weight:normal;
+	text-transform:none;
+}
+.imeiNum{
+	font-weight:bold;
+}
+.imeiNum span{
+	font-weight:normal;
+	font-size:16px;
+	line-height:24px;
+}
+/* !contents
+---------------------------------------------------------- */
+#contents {	
+	padding-top:20px;
+}
+#wrapper .VisualIns  h3{
+	font-size:22px;
+	line-height:44px;
+	color:#fff;
+	display:inline-block;
+	border-radius:0 4px 4px 0;
+	font-weight:bold;
+	background:#3a4356;
+	padding:0 64px 0 52px;
+	margin-bottom:22px;
+}
+.visualInner{
+	padding:0 38px;
+	}
+.VisualIns table{
+	width:100%;
+}
+.VisualIns table tr th{
+	font-size:15px;
+	font-weight:600;
+	line-height:17px;
+	color:#4d5360;
+	text-decoration:none;
+	padding-bottom:25px;
+}
+.VisualIns table tr td{
+	padding-bottom:25px;
+}
+.VisualIns table tr td .activeButton{
+	font-size:14px;
+	line-height:34px;
+	font-weight:bold;
+	border:0;
+	border-radius:4px;
+	text-transform:uppercase;
+	padding:0 20px;
+	background:#e2e6ef;
+	color:#aab3c5;
+}
+.btnMargin{
+	margin-left:10px;
+}
+
+
+.btnMargin1,.btnMargin2{
+	margin-left:5px;
+}
+
+
+
+.paddingTop{
+	padding-top:32px;
+}
+.VisualIns table tr td.col-sm-4 span{
+	font-size:14px;
+	display:inline-block;
+	line-height:17px;
+	color:#4d5360;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding-bottom:12px;
+}
+.VisualIns table tr td input{
+	width:100%;
+	background:#f3f5fa;
+	font-size:14px;
+	line-height:34px;
+	height:34px;
+	padding:0 12px;
+	border:solid 1px #8897a2;
+	color:#aab3c5;
+	border-radius:4px;
+}
+.reportStatus{
+	text-align:right;
+	position:relative;
+	margin:8px 52px 28px;
+	overflow:hidden;
+}
+.reportStatus:after{
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	left:-350px;
+	width:100%;
+	height:1px;
+	background:#8897a2;
+	content:"";
+	z-index:999;
+}
+.reportStatus li{
+	background:#fff;
+	display:inline-block;
+	padding-left:16px;
+}
+.reportStatus li img{
+	padding-right:8px;
+}
+.reportStatus li a{
+	display:inline-block;
+	font-size:13px;
+	text-decoration:none;
+	line-height:20px;
+	color:#4d5360;
+}
+
+
+
+
+
+/* !css of button active and  emoji image active
+---------------------------------------------------------- */
+
+.VisualIns table tr td span{
+	position:relative;
+	display:inline-block;
+}
+.VisualIns table tr td span input[type="radio"]{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:9999;
+	opacity:0;
+	cursor:pointer;
+}
+.VisualIns table tr td span input[type="radio"]:checked + .activeButton{
+	background:#ff5c33 ;
+	color:#fff;
+}
+.VisualIns table tr td span input[type="radio"]:checked + label .btnMargin1{
+	display:none;
+}
+.VisualIns table tr td span input[type="radio"]:checked + label .btnMargin2{
+	display:inline-block !important;
+}
+.VisualIns table tr td input:focus {
+    background: #fff;
+    color: #667377;
+}
+.VisualIns table tr td img {
+	cursor:pointer;
+}
+/* !css of button active and 
+---------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !footer
+---------------------------------------------------------- */
+.noteOption{
+	padding:0 36px;
+}
+.noteOption .col-sm-2 p{
+	font-size:15px;
+	line-height:20px;
+	color:#4d5360;
+}
+.noteOption .col-sm-2 p span{
+	font-size:18px;
+	line-height:20px;
+	font-weight:bold;
+}
+.noteOption .col-sm-10 textarea{
+	width:100%;
+	height:85px;
+	background:#f3f5fa;
+	padding:12px;
+	font-size:13px;
+	color:#4d5360;
+	border:solid 1px #8897a2;
+}
+.performed{
+	padding:36px 36px 45px;
+	font-size:14px;
+	line-height:22px;
+	color:#4d5360;
+	text-align:left;
+	display:inline-block;
+}
+.qaPerformed{
+	text-transform:uppercase;
+	font-size:12px;
+	line-height:14px;
+	font-weight:bold;
+	display:block;
+}
+.opsManager{
+	font-size:26px;
+	line-height:34px;
+	font-weight:bold;
+	display:block;
+}
+@media screen and (max-width: 1200px) {
+#innerWrap {
+    max-width: 80%;
+}
+.VisualIns table tr .col-sm-2,.VisualIns table tr .col-sm-6,.VisualIns table tr .col-sm-4{
+	width:33.33%
+}
+}
+@media screen and (max-width: 991px) {
+#headerLogo {
+    padding: 50px 0 0 20px;
+    min-height: 144px;	
+}
+#headerLogo img{
+	width:100px;
+}
+#headerLinks {
+    padding: 20px 0 0 20px;
+    min-height: 144px;
+}
+#headerLinks h2 {
+    line-height: 22px;
+	font-size:16px;
+}
+#headerLinks .deviceName {
+    padding-left: 34px;
+}
+#headerLinks .deviceName {
+    font-size: 12px;
+}
+#headerLinks .deviceName span {
+    font-size: 20px;
+    line-height: 34px;
+}
+.imeiNum span {
+    font-size: 14px;
+    line-height: 20px;
+}
+#headerLinks:after {
+    top: 20px;
+    right: 20px;
+}
+#wrapper .VisualIns h3 {
+    font-size: 16px;
+    line-height: 32px;
+    padding: 0 30px;
+    margin-bottom: 10px;
+}
+.visualInner {
+    padding: 0 12px;
+}
+.VisualIns table tr th {
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 20px;
+}
+.VisualIns table tr td {
+    padding-bottom: 20px;
+	text-align:center;
+}
+.VisualIns table tr td button {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: normal;
+	padding:0 12px;
+	display:inline-block;
+}
+.btnMargin {
+    margin-left: 16px;
+}
+.VisualIns table tr td input {
+    font-size: 12px;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 8px;
+}
+.VisualIns table tr td.col-sm-4 span {
+	font-size:12px;
+	text-align:left;
+	display:block;
+}
+.reportStatus {
+    margin: 8px 30px 30px;
+}
+.reportStatus li {
+    padding-left: 8px;
+}
+.reportStatus li img {
+    padding-right: 4px;
+}
+.reportStatus:after {
+    left: -310px;
+}
+.noteOption {
+    padding: 0 15px;
+}
+.noteOption .col-sm-2 p {
+    font-size: 12px;
+    line-height: 18px;
+}
+.noteOption .col-sm-2 p span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.performed {
+    padding: 20px 15px 14px;
+    font-size: 14px;
+}
+.qaPerformed {
+    font-size: 11px;
+}
+.opsManager {
+    font-size: 24px;
+    line-height: 32px;
+}
+}
+@media screen and (max-width: 767px) {
+#wrapper {
+    padding: 30px 0 30px;
+}
+#innerWrap {
+    max-width: 90%;
+}
+#headerLogo {
+    padding: 30px;
+    min-height: auto;
+}
+#headerLinks {
+    padding: 20px 20px 10px;
+    min-height: auto;
+}
+#headerLinks h2 {
+    line-height: 18px;
+    font-size: 14px;
+}
+#headerLinks .deviceName span {
+    font-size: 16px;
+	line-height:24px;
+}
+#headerLinks:after {
+    top: -80px;
+}
+#wrapper .VisualIns h3 {
+    font-size: 14px;
+	margin-bottom:24px;
+}
+.VisualIns table tr .col-sm-2, .VisualIns table tr .col-sm-6, .VisualIns table tr .col-sm-4 {
+    width: 100%;
+	display:block;
+}
+.paddingTop {
+    padding-top: 0;
+}
+.VisualIns table tr {
+    display: block;
+    border-bottom: solid 1px #d0d6e2;
+    margin: 0 0 32px;
+    padding-bottom: 8px;
+}
+.VisualIns table tr th {
+    padding-bottom: 14px;
+}
+.VisualIns table tr td {
+    padding-bottom: 14px;
+    text-align: left;
+}
+.VisualIns table tr td.col-sm-4 span {
+    display: none;
+}
+.VisualIns table tr td button {
+    margin-left: 30px;
+}
+.reportStatus {
+    margin: 0px 12px 14px;
+    padding-left: 0;
+	text-align:center;
+}
+.reportStatus::after {
+	display:none;
+}
+.reportStatus li {
+    padding:0 0 12px 16px;
+}
+.performed {
+    font-size: 12px;
+    line-height: 16px;
+}
+.opsManager {
+    font-size: 22px;
+    line-height: 30px;
+}
+}

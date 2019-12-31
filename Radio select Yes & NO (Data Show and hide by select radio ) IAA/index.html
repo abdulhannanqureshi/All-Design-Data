@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style>
+#wrapper{
+	margin: 100px;
+}
+/*--------------custome radio -----------------*/
+.radio-type {
+  line-height: 42px;
+}
+.radio-type .radio{
+  display: inline-block;
+  margin-right: 6px;
+}
+.radio-type  .radio label{
+  line-height: 22px;
+}
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #0d5ba7;
+    border-radius: .25em;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: .5em;
+}
+.radio .cr {
+    border-radius: 50%;
+    text-align: center;
+    margin-right: .5em !important;
+}
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+    color: #0d5ba7;
+}
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+.cr-icon {
+    width: 14px;
+    height: 14px;
+    background: #0d5ba7;
+    display: inline-block;
+    border-radius: 50%;
+}
+#discount_type{
+    display: none;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div class="col-sm-12">
+       <div class="radio-type">
+             Do you want to give discount ?
+            <div class="radio">
+                <label>
+                    <input type="radio" class="checked-wrap" name="discount" id="yes-checked" value="yes">
+                    <p class="cr">
+                        <span class="cr-icon fa fa-circle"></span> 
+                    </p>Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" class="checked-wrap" name="discount" id="no-checked" value="no" checked="">
+                    <p class="cr"><span class="cr-icon fa fa-circle"></span></p>No
+                </label> 
+            </div>
+        </div>
+    </div>
+    <div id="discount_type">
+        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+            <label for="">Discount</label>
+            <input type="text" name="" class="form-control" placeholder="Enter Percent / Flat">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+            <label for="">Reason</label>
+            <input type="text" name="" class="form-control" placeholder="Enter Percent / Flat">
+        </div>
+    </div>
+
+</div><!-- /#wrapper -->
+<!-- click on radio button yes and no -->
+<script> 
+    $(document).ready(function(){
+        $(".checked-wrap").click(function(){
+            if( $('#yes-checked').is(":checked") ){
+                $("#discount_type").slideDown(300);
+            }
+            else{
+                $("#discount_type").slideUp(300);
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project | Bootstrape 4</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<style>
+	/*--------------header css-----------------*/
+.header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+}
+.header-main .navbar-brand {
+    color: #fff;
+    width: 240px;
+    text-align: left;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    line-height: 30px;
+    background: #0055a6;
+    padding: 15px 35px;
+    display: flex;
+    align-items: flex-end;
+    line-height: 20px;
+    margin: 0;
+}
+.header-main .navbar-brand span{
+    white-space: normal;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 15px;
+    color: #fff !important;
+}
+.header-main .navbar-brand  img{
+    height: 45px;
+}
+.nav-link.for-bedge{
+    position: relative;
+    font-size: 20px;
+}
+.nav-link.for-bedge img{
+    width: 25px;
+}
+.nav-link.for-bedge .badge-pill {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    height: 20px;
+    width: 20px;
+    padding: 5px 0;
+    text-align: center;
+}
+.nav-link.for-bedge .badge-pill.badge-success{
+  background-color: #00D000;
+}
+.nav-link.for-bedge .badge-pill.badge-warning{
+  background-color: red;
+  color: #fff;
+}
+.header-main .navbar-collapse {
+    padding: 0px 20px;
+}
+.dashboard-heading{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.header-main .navbar-collapse .dropdown .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-left: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.header-main .navbar-collapse .dropdown .nav-link img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #FFC60F;
+    padding: 3px;
+    margin-left: 15px;
+}
+.header-main .navbar-collapse .navbar-nav{
+    align-items: center;
+}
+.p-0{
+	padding: 0;
+}
+@media screen and (max-width:991px){
+  .header-main .navbar-collapse {
+    display: flex;
+    flex-basis: auto;
+    padding: 0px 8px;
+  }
+  .header-main .navbar-collapse .navbar-nav {
+    flex-direction: row;
+  }
+  .header-main .navbar-collapse .navbar-nav li{
+    margin:0 6px;
+  }
+  .header-main .navbar-collapse .dropdown .nav-link {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .nav-link.for-bedge img {
+     width: 22px;
+  }
+  .dashboard-heading {
+    font-size: 22px;
+    margin-left: 8px;
+  }
+  .header-main .navbar-brand {
+    color: #fff;
+    width: 250px;
+  }
+}
+@media screen and (max-width:767px){
+  .header-main .navbar-brand {
+    color: #fff;
+    width: 100%;
+    padding: 20px 20px;
+    display: block;
+    height: auto;
+  }
+  .header-main .navbar-collapse .dropdown .nav-link {
+    padding: 0;
+  }
+  .header-main .navbar-brand span {
+    font-size: 18px;
+    margin-left: 10px;
+    vertical-align: bottom;
+  }
+  .dashboard-heading {
+    font-size: 20px;
+  } 
+}
+@media screen and (max-width: 450px){
+  .dashboard-heading {
+    text-indent: -99999px;
+    display: inline-block;
+  }
+  .header-main .navbar-collapse .dropdown .nav-link {
+    font-size: 13px;
+  }
+}
+/**----------------header end-------------------**/
+.chiller-theme .sidebar-wrapper {
+    background: #28333F;
+}
+/*----------------toggeled sidebar----------------*/
+.page-wrapper.toggled .sidebar-wrapper {
+  left: 0px;
+}
+@media screen and (min-width: 992px) {
+  .page-wrapper.toggled .page-content {
+    padding-left: 240px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .page-wrapper.toggled .page-content {
+    padding-left: 260px;
+  }
+}
+/*----------------show sidebar button----------------*/
+#show-sidebar {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  border-radius: 0 4px 4px 0px;
+  width: 35px;
+  transition-delay: 0.3s;
+}
+.page-wrapper.toggled #show-sidebar {
+  left: -40px;
+  top: 110px;
+}
+/*----------------sidebar-wrapper----------------*/
+.sidebar-wrapper {
+    width: 240px;
+    height: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 70px;
+    left: -300px;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+.sidebar-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-wrapper a {
+  text-decoration: none;
+}
+/*----------------sidebar-content----------------*/
+.sidebar-content {
+  max-height: calc(100% - 110px);
+  height: calc(100% - 110px);
+  overflow-y: auto;
+  position: relative;
+}
+.sidebar-content.desktop {
+  overflow-y: hidden;
+}
+/*--------------------sidebar-brand----------------------*/
+.sidebar-wrapper .sidebar-brand {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+.sidebar-wrapper .sidebar-brand > a {
+  text-transform: uppercase;
+  font-weight: bold;
+  flex-grow: 1;
+}
+.sidebar-wrapper .sidebar-brand #close-sidebar {
+  cursor: pointer;
+  font-size: 20px;
+}
+/*--------------------sidebar-header----------------------*/
+
+.sidebar-wrapper .sidebar-header {
+  padding: 30px 30px 0;
+  overflow: hidden;
+  text-align: center;
+}
+.sidebar-wrapper .sidebar-header .user-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 2px solid #FFF;
+}
+
+.sidebar-wrapper .sidebar-header .user-pic img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.sidebar-wrapper .sidebar-header .user-info > span {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0 0;
+}
+.sidebar-wrapper .sidebar-header .user-info .user-role {
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  font-weight: lighter;
+  color: #fff;
+}
+.sidebar-wrapper .sidebar-header .user-info .user-status {
+  font-size: 11px;
+  margin-top: 4px;
+}
+.sidebar-wrapper .sidebar-header .user-info .user-status i {
+  font-size: 8px;
+  margin-right: 4px;
+  color: #5cb85c;
+}
+@media screen and (max-width: 991px){
+  .sidebar-wrapper {
+    width: 250px;
+  }
+  .sidebar-wrapper .sidebar-header .user-info > span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px){
+  .sidebar-wrapper {
+    top: 152px;
+  }
+  .sidebar-content {
+    max-height: calc(100% - 152px);
+    height: calc(100% - 152px);
+  }
+}
+/*-----------------------sidebar-search------------------------*/
+
+.sidebar-wrapper .sidebar-search > div {
+  padding: 10px 20px;
+}
+
+/*----------------------sidebar-menu-------------------------*/
+
+.sidebar-wrapper .sidebar-menu {
+  padding-bottom: 10px;
+}
+
+.sidebar-wrapper .sidebar-menu .header-menu span {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 20px 5px 20px;
+  display: inline-block;
+}
+.sidebar-wrapper .sidebar-menu ul li a {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 30px 10px 20px;
+  font-size: 14px;
+  color: #fff;
+}
+.sidebar-wrapper .sidebar-menu ul li a i {
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+.sidebar-wrapper .sidebar-menu ul li a:hover > i::before {
+  display: inline-block;
+  animation: swing ease-in-out 0.5s 1 alternate;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  font-style: normal;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background: 0 0;
+  position: absolute;
+  right: 15px;
+  top: 14px;
+}
+.sidebar-dropdown .sidebar-submenu ul {
+    padding: 0 30px 20px;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li {
+  padding-left: 35px;
+  font-size: 13px;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a {
+    padding: 8px;
+    font-size: 13px;
+    color: #ccc;
+    border-bottom: 1px solid #49535E;
+}
+.sidebar-wrapper .sidebar-menu ul li a span.label,
+.sidebar-wrapper .sidebar-menu ul li a span.badge {
+  float: right;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .badge,
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .label {
+  float: right;
+  margin-top: 0px;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-submenu {
+  display: none;
+}
+.sidebar-wrapper  .sidebar-menu .sidebar-dropdown.active .sidebar-submenu{
+  display: block;
+}
+.sidebar-wrapper  .sidebar-menu .sidebar-dropdown.active .sidebar-submenu ul li.active a{
+  color: #85CAE9;
+}
+
+.sidebar-wrapper.show-icon-side .sidebar-menu .sidebar-submenu {
+  display: none !important;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown.active > a:after {
+  transform: rotate(90deg);
+  right: 17px;
+}
+@media screen and (max-width:991px){
+  .sidebar-wrapper .sidebar-menu ul li a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li {
+    padding-left: 28px;
+    font-size: 10px;
+  }
+  .navbar-nav .dropdown-menu {
+     position: absolute; 
+     float:left; 
+  }
+}
+.colleps-icon img {
+    width: 28px;
+    cursor: pointer;
+}
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li a img {
+    width: 25px;
+    margin-right: 12px;
+}
+@media screen and (max-width:991px){
+  .btn-update-profile {
+    border: 1px solid #FFC60F;
+    padding: 8px 22px;
+    font-size: 14px;
+  }
+  .chiller-theme .sidebar-wrapper .sidebar-menu ul li a img {
+    width: 20px;
+    margin-right: 12px;
+  }
+  .colleps-icon img {
+     width: 22px;
+  }
+}
+
+
+.course_page{
+	margin-top: 70px;
+	background: #000;
+	height: calc(100vh - 70px);
+}
+
+/*---------------only show icon side bar---------------------------*/
+.page-wrapper .sidebar-wrapper.show-icon-side{
+  left: 0;
+  width: 60px;
+}
+.page-wrapper .sidebar-wrapper.show-icon-side .user-info{
+    display: none;
+}
+.page-wrapper .sidebar-wrapper.show-icon-side .user-info{
+    display: none;
+}
+.page-wrapper .sidebar-wrapper.show-icon-side .sidebar-header .user-pic{
+    width: 40px;
+    height: 40px;
+}
+.page-wrapper .sidebar-wrapper.show-icon-side .sidebar-menu ul li a {
+  padding: 0 0 0;
+  text-align: center;
+  margin:30px 0 0;
+}
+.page-wrapper .sidebar-wrapper.show-icon-side .sidebar-menu ul li a span{
+  display: none;
+}
+.chiller-theme .sidebar-wrapper.show-icon-side .sidebar-menu ul li a img {
+    width: 22px;
+    margin-right: 0;
+}
+.page-wrapper .sidebar-wrapper.show-icon-side .sidebar-menu .sidebar-dropdown > a:after{
+  display: none;
+}
+.page-wrapper .sidebar-wrapper.show-icon-side .sidebar-header {
+    padding: 30px 0px 0;
+}
+/*----------Dashboard Responsive-------------*/
+@media screen and (max-width: 1200px) {
+  .white-box {
+    min-height: 300px;
+  }
+  .rate-box {
+    padding: 25px 10px;
+  }
+  .btn-dash {
+    padding: 12px 0;
+    width: 100%;
+  }
+  .tittle {
+    font-size: 22px;
+  }
+  .subtittle {
+    font-size: 14px;
+  }
+  .big-tittle {
+    font-size: 30px;
+  }
+  .rat-margin {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .section-dash .col-lg-4{
+      margin-bottom: 30px;
+  }
+  .colored-box {
+    margin: 0 0 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-wrapper .page-content > div {
+    padding: 20px 20px 20px 10px;
+  }
+  .tittle {
+    font-size: 20px;
+  }
+  .big-tittle {
+    font-size: 26px;
+  }
+  .section-dash .col-lg-4 {
+    margin-bottom: 15px;
+  }
+  .btn-dash {
+    max-width: 100%;
+    width: 200px;
+  }
+  .colored-box h1 {
+    font-size: 32px;
+  }
+  .rate-box{
+    background-size: 100% auto;
+  } 
+}
+@media screen and (max-width: 500px) {
+  .page-wrapper.toggled .page-content {
+    padding-left: 70px;
+  }
+}
+/*----------------Dashboard End-------------------*/
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<header class="header-main">
+    	<div class="container-fluid p-0">
+        	<nav class="navbar navbar-expand-lg navbar-light p-0">
+            	<a class="navbar-brand" href="#"><img src="http://192.168.1.27/iaa_latest/public/admin_assets/images/other/img_logo.png" alt="IAA" class="img-fluid"><span>Indian Aviation Academy</span></a>
+            	<div class=" navbar-collapse" id="navbarSupportedContent">
+                	<ul class="navbar-nav mr-auto ">
+                    	<li class="nav-item">
+                        	<a id="toggle-sidebar" class="colleps-icon" href="#">
+                            	<img src="http://192.168.1.27/iaa_latest/public/admin_assets/images/icons/collapse-02.png" alt="menu">
+                        	</a>
+                          	<span class="dashboard-heading">Dashboard</span>
+                    	</li>
+                	</ul>
+                 	<ul class="navbar-nav ml-auto">
+                   		<li class="nav-item dropdown notification-dropdown">
+                      		<a class="nav-link dropdown-toggle for-bedge" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        		<img src="http://192.168.1.27/iaa_latest/public/admin_assets/images/icons/notification.png" alt="Notification">
+                        		<span class="badge badge-pill badge-warning" id="unread_count_show" style="display: none;"></span>
+                      		</a>
+                      		<div class="dropdown-menu notification" aria-labelledby="navbarDropdown">
+                        		<ul>
+                          			<li class="not-head">
+                            			<h6 class="dropdown-header m-0 text-uppercase"><span class="grey darken-2">Notifications</span></h6>
+									</li>
+                          			<li class="not-body scrollable-container w-100">
+                            			<div class="media-list" id="unread_list_show">
+	                            			<a href="javascript:void(0)">
+										        <div class="media">
+										          	<div class="media-left align-self-top"><i class="far fa-comments"></i></div>
+										          	<div class="media-body">
+										          		<p class="notification-text">No Record Found.</p>
+										          	</div>
+										        </div>
+  											</a>
+										</div>
+                          			</li>
+                          			<li class="not-foot"><a class="dropdown-item text-muted text-center" href="http://192.168.1.27/iaa_latest/notification-list">Read all notifications</a></li>
+                        		</ul>
+                      		</div>
+                    	</li>
+						<li class="nav-item dropdown">
+                        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         	Admin
+								<img src="http://192.168.1.27/iaa_latest/public/uploads/admin/staff_images/indexjpegjpeg.jpeg" class="img-fluid" alt="User Pic">
+							</a>
+                    		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	                            <a class="dropdown-item" href="http://192.168.1.27/iaa_latest/staff-view-profile">Profile</a>
+	                            <a class="dropdown-item" href="http://192.168.1.27/iaa_latest/change-pass">Change Password</a>
+                      			<a class="dropdown-item" href="http://192.168.1.27/iaa_latest/role-asign-management">Role Management</a>
+                        		<a class="dropdown-item" href="http://192.168.1.27/iaa_latest/admin-logout">Logout</a>
+                        	</div>
+                    	</li>
+                	</ul>
+            	</div>
+       		</nav>
+    	</div>
+	</header>
+	<!-- header End  -->
+	<div class="page-wrapper chiller-theme toggled">
+		<!-- Side bar Start -->
+		<nav id="sidebar" class="sidebar-wrapper">
+    		<div class="sidebar-content">
+		     	<div class="sidebar-header">
+		        	<div class="user-pic">
+						<img src="http://192.168.1.27/iaa_latest/public/uploads/admin/staff_images/indexjpegjpeg.jpeg" class="img-fluid" alt="User Pic">
+					</div>
+				</div>
+				<div class="sidebar-menu">
+					<ul>
+        				<li class="sidebar-dropdown"> 
+        					<a href="#"> 
+        						<img src="http://192.168.1.27/iaa_latest/public/uploads/admin/menu_icons/pagespng.png" alt="side menu"><span>Page</span>
+        					</a>
+        					<div class="sidebar-submenu">
+        						<ul>
+        							<li><a href="#"><span>Page master</span></a></li>
+        							<li><a href="#"><span>Page column</span></a></li>
+        						</ul>
+        					</div>
+        				</li>
+        				<li class="sidebar-dropdown"> 
+        					<a href="#"> 
+        						<img src="http://192.168.1.27/iaa_latest/public/uploads/admin/menu_icons/front-menupng.png" alt="side menu"><span>Front Menu</span>
+        					</a>
+        					<div class="sidebar-submenu">
+        						<ul>
+        							<li>
+        								<a href="#">
+        									<span>Front Menu List</span>
+        								</a>
+        							</li>
+        						</ul>
+        					</div>
+        				</li>
+        				<li class="sidebar-dropdown"> 
+        					<a href="#"> 
+        						<img src="http://192.168.1.27/iaa_latest/public/uploads/admin/menu_icons/staffpng.png" alt="side menu"><span>Staff</span>
+        					</a>
+        					<div class="sidebar-submenu">
+        						<ul>
+        							<li>
+        								<a href="http://192.168.1.27/iaa_latest/designation-list">
+        									<span>Staff-Designation</span>
+        								</a>
+        							</li>
+        						</ul>
+        					</div>
+        				</li>
+        			</ul>
+        		</div>
+			</div>
+		</nav>
+		<!-- Side bar end -->
+		
+		<!--Main Start  -->
+		<main class="page-content course_page ">
+			
+		</main>
+		<!--Main End  -->
+	</div>
+
+</div><!-- /#wrapper -->
+<script>
+    jQuery(function ($) {
+    	// For Aside Drop Down Start
+        $(".sidebar-dropdown > a").click(function() {
+         	$(".sidebar-submenu").slideUp(200);
+            if ($(this).parent().hasClass("active")) {
+              	$(".sidebar-dropdown").removeClass("active");
+              	$(this).parent().removeClass("active");
+            } 
+            else {
+            	$(".sidebar-dropdown").removeClass("active");
+              	$(this).next(".sidebar-submenu").slideDown(200);
+              	$(this).parent().addClass("active");
+            }
+         });
+    	// For Aside Drop Down End
+        
+        $("#toggle-sidebar").click(function() {
+         	$(".page-wrapper").toggleClass("toggled");
+         	$(".sidebar-wrapper").toggleClass("show-icon-side");
+        });
+        $( window ).resize(function() {
+      		if($(window).width() <=500) $('.sidebar-wrapper').addClass("show-icon-side");
+      		else $('.sidebar-wrapper').removeClass("show-icon-side");
+    	});
+    });
+</script>
+</body>
+</html>

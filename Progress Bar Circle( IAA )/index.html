@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project | Bootstrape 4</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- For Progres bar -->
+<script src="js/jQuery-plugin-progressbar.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jQuery-plugin-progressbar.css" media="all" />
+
+<style>
+/*------------main Style--------------------*/
+.progress-bar {
+    background-color: transparent !important;
+}
+.progress-bar {
+    color: #000;
+}
+.progress-bar div span {
+    color: #2F3442;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.progress-bar div {
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+.white-box{
+  text-align: center;
+  background-color: #fff;
+  padding: 25px;
+  min-height: 350px;
+}
+.progress-content-block .content-box{
+    position: absolute;
+    z-index: 10;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+  }
+.progress-content-block .content-box{
+   color: red;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+.progress-content-block .content-box .heading-pro {
+    font-size: 18px;
+    margin: 8px 0 0;
+    font-weight: bold;
+    color: #3b3d40;
+}
+.progress-content-block .content-box .extra-content{
+    font-size: 15px;
+    color: #7f7f80;
+}
+</style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="progress-content-block white-box">
+            <div class="progress-bar position one" data-percent="50" data-duration="1000" data-color="#eee,#0d8be2">
+              <div class="content-box">
+                <h3 class="heading-pro">Nam Rutrum</h3>
+                <p class="extra-content">Lorem Ipsum</p>
+              </div>
+            </div>
+         </div>
+    </div><!-- /#wrapper -->
+<script>
+    $(".progress-bar").loading();    
+</script>
+</body>
+</html>

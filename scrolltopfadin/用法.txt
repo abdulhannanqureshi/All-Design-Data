@@ -1,0 +1,4 @@
+meta：
+<script type="text/javascript" src="路径/jquery.scrollfadin.js"></script>
+
+

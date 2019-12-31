@@ -1,0 +1,146 @@
+@charset "utf-8";
+/*
+ * style.css
+ *
+ *  version --- 1.0
+ *  updated --- 2013/5/10
+ */
+
+.clearfix {
+	display: block;
+	min-height: 1%;
+}
+.clearfix:after {
+	clear: both;
+	content:".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+* html .clearfix {
+	height: 1%;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+#wrapper {
+	width: 100%;
+}
+
+
+/* グローバルナビ
+------------------------------*/
+.slidemenu {
+	width: 260px;
+	height: 100%;
+	position: fixed;
+	visibility: hidden;
+	z-index: -1;
+	background: #dae2e4;
+	top: 0;
+	border-left: 1px solid #c1c8c9;
+}
+.slidemenu-left {left: 0;}
+.slidemenu-right {right: 0;}
+.slidemenu .slidemenu-body {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+	.slidemenu .slidemenu-content {
+		position: relative;
+	}
+	.slidemenu .slidemenu-inner {
+		border-bottom: 1px solid #f2fafc;
+	}
+	
+	.slidemenu h2 {
+		border-top: 1px solid #f2fafc;
+		border-bottom: 1px solid #c1c8c9;
+	}
+	.slidemenu h2:first-child {
+		border-top: 0;
+	}
+		.slidemenu h2 span ,
+		.slidemenu h2 a{
+			font-size: 13px;
+			font-weight: bold;
+			padding: 17px 10px 17px 40px;
+			color: #1d2a40;
+			display: block;
+			position: relative;
+		}
+		.slidemenu h2 span:before {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			margin-top: -4px;
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-bottom: 2px solid #1d2a40;
+			border-right: 2px solid #1d2a40;
+			-webkit-transform: rotate(-45deg);
+			   -moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				 -o-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+		}
+		.slidemenu h2 span.on:before {
+			-webkit-transform: rotate(45deg);
+			   -moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				 -o-transform: rotate(45deg);
+					transform: rotate(45deg);
+		}
+		.slidemenu .slidemenu-content ul {
+			display: none;
+		}
+		.slidemenu .slidemenu-content li {
+			border-bottom: 1px solid #dae2e4;
+			background: #adc4c9;
+		}
+			.slidemenu .slidemenu-content li a {
+				font-size: 13px;
+				line-height: 1.5;
+				padding: 10px 0 10px 25px;
+				display: block;
+				color: #333;
+				position: relative;
+			}
+			.slidemenu .slidemenu-content li a.subBtn:before {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				margin-top: -4px;
+				content: "";
+				width: 8px;
+				height: 8px;
+				border-bottom: 1px solid #1d2a40;
+				border-right: 1px solid #1d2a40;
+				-webkit-transform: rotate(-45deg);
+				   -moz-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+					 -o-transform: rotate(-45deg);
+						transform: rotate(-45deg);
+			}
+			.slidemenu .slidemenu-content li a.subBtn.on:before {
+				-webkit-transform: rotate(45deg);
+				   -moz-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					 -o-transform: rotate(45deg);
+						transform: rotate(45deg);
+			}
+			.slidemenu .slidemenu-content li li {
+				border-top: 1px solid #dae2e4;
+				border-bottom: 0;
+			}
+				.slidemenu .slidemenu-content li li a {
+					padding: 10px 0 10px 41px;
+				}
+	
+.btnMenu {
+	float: right;
+	position: relative;
+}

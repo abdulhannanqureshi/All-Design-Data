@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<head>
+    <title>slider</title>
+    <link media="screen" rel="stylesheet" type="text/css" href="front/css/slider-style.css" />
+</head>
+<body>
+<!-- Main container -->
+<div id="main-container">
+    <!-- Page container -->
+        <!-- Main template -->
+        <section id="page" data-js-id="home">
+            <!-- First slider Start-->
+            <section class="home-head page-head observable">
+                <div class="page-head-bg home-head-bg img-lazyload-container">
+                    <img data-lazyload="true" class="img-lazyload" src="images/slide-1.jpg"
+                    data-width="1920" data-height="1040" alt="">
+                </div>
+                <div class="page-head-bg home-head-bg img-lazyload-container">
+                    <img data-lazyload="true" class="img-lazyload" src="images/slide-2.jpg"
+                    data-width="1920" data-height="1040" alt="">
+                </div>
+                <div class="page-head-bg home-head-bg img-lazyload-container">
+                    <img data-lazyload="true" class="img-lazyload" src="images/slide-3.jpg"
+                    data-width="1920" data-height="1040" alt="">
+                </div>
+                <!-- Content Slider -->
+                <div class="page-head-container">
+                    <div class="home-head-slider" id="home-head-slider" data-total="3">
+                        <!-- item first -->
+                        <div class="home-head-slide active">
+                            <div class="home-head-slide-inner">
+                                <div class="home-head-slide-title">
+                                    <div class="home-head-slide-title-sub"><span>Terre de feu et de glace</span></div>
+                                    <h2 class="home-head-slide-title-main">L'Islande</h2>
+                                </div>
+                                <a href="pays/voyage-islande/170.html" class="button button-white home-head-slide-bt change-page">En savoir +</a>
+                            </div>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="home-head-slide ">
+                            <div class="home-head-slide-inner">
+                                <div class="home-head-slide-title">
+                                    <div class="home-head-slide-title-sub"><span>Terre de feu et de glace</span></div>
+                                    <h2 class="home-head-slide-title-main">L'Islande</h2>
+                                </div>
+                                <a href="pays/voyage-islande/170.html" class="button button-white home-head-slide-bt change-page">En savoir +</a>
+                            </div>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="home-head-slide ">
+                            <div class="home-head-slide-inner">
+                                <div class="home-head-slide-title">
+                                    <div class="home-head-slide-title-sub"><span>Terre de feu et de glace</span></div>
+                                    <h2 class="home-head-slide-title-main">L'Islande</h2>
+                                </div>
+                                <a href="pays/voyage-islande/170.html" class="button button-white home-head-slide-bt change-page">En savoir +</a>
+                            </div>
+                        </div>
+                        <!-- arrow and controllers -->
+                        <div class="home-head-slider-nav">
+                            <div class="home-head-slider-nav-item home-head-slider-nav-item-prev" id="home-head-slider-prev">
+                                <span class="home-head-slider-nav-item-inner"></span>
+                            </div>
+                            <div class="home-head-slider-nav-item home-head-slider-nav-item-next" id="home-head-slider-next">
+                                <span class="home-head-slider-nav-item-inner"></span>
+                            </div>
+                        </div>
+                        <!-- arrow and controllers -->
+                    </div>
+                </div>
+                <!-- Content Slider -->
+                <!-- Progress bar -->
+                <div class="slider-progress home-head-slider-progress" id='home-head-slider-progress'>
+                    <div class="slider-progress-inner"></div>
+                </div>
+            </section>
+
+            <!-- First slider End-->
+            
+            <!-- Second Slider Start -->
+            <section class="home-selection observable">
+                <!-- Filter for second slider-->
+                <section class="home-filters" style="display: none;">
+                    <div class=" home-filters-duration">
+                        <div class="home-filters-duration-slider" data-min="4" data-max="23">
+                        </div>
+                    </div> 
+                </section>
+                <!-- Filter for second slider-->
+                <!-- Slider selection -->
+                <div class="slider-selection">
+                    <!-- Slider Containt Start-->
+                    <div class="slider-container" id="slider-selection">
+                        <!-- Slider Arrow Box Start-->
+                        <div class="slider-nav">
+                            <div class="slider-nav-container">
+                                <div class="slider-nav-buttons">
+                                    <!-- Next Arrow Start-->
+                                    <div class="slider-nav-item slider-nav-item-next" id="slider-selection-next">
+                                        <div class="slider-nav-item-icon-container">
+                                            <span class="slider-nav-item-icon-1">
+                                                <svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg>
+                                            </span>
+                                            <span class="slider-nav-item-icon-2">
+                                                <svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Next Arrow End-->
+                                    <!-- Prev Arrow Start-->
+                                    <div class="slider-nav-item slider-nav-item-prev" id="slider-selection-prev">
+                                        <div class="slider-nav-item-icon-container">
+                                            <span class="slider-nav-item-icon-1">
+                                                <svg class="icon icon-fleche"> <use xlink:href="#fleche" />
+                                                </svg>
+                                            </span>
+                                            <span class="slider-nav-item-icon-2">
+                                                <svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Prev Arrow End-->
+                                </div>
+                                <!-- Pagination Number Start-->
+                                <div class="slider-nav-pagination">
+                                    <span class="slider-nav-page">01</span>
+                                    <span class="slider-nav-total">05</span>
+                                </div>
+                                <!-- Pagination Number End-->
+                                <!-- Progress bar Start-->
+                                <div class="slider-progress slider-nav-progress" id='slider-selection-progress'>
+                                    <div class="slider-progress-inner">
+                                    </div>
+                                </div> 
+                                <!-- Progress bar End--> 
+                            </div>
+                        </div>
+                        <!-- Slider Arrow Box Start-->
+                        <div class="slider-selection-slides active" id="slider-selection-tab1" data-id="tab1" data-total="9">
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="1">
+                                text one
+                            </div>
+                            <!-- Slider item End-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="2">
+                                text
+                            </div>
+                            <!-- Slider item End-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="3">
+                                text
+                            </div>
+                            <!-- Slider item Start-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="4">
+                                text
+                            </div>
+                            <!-- Slider item Start-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="5">
+                                text
+                            </div>
+                            <!-- Slider item Start-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="6">
+                                text six
+                            </div>
+                            <!-- Slider item Start-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="7">
+                                text six
+                            </div>
+                            <!-- Slider item Start-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="8">
+                                text six
+                            </div>
+                            <!-- Slider item Start-->
+                            <!-- Slider item Start-->
+                            <div class="slider-selection-item" data-num="9">
+                                text six
+                            </div>
+                            <!-- Slider item Start-->
+                        </div>
+                        <!-- Slider Arrow Box Endt-->
+                    </div>
+                </div>
+                    <!-- Slider Containt Start-->
+                </section>
+                <!-- Second Slider End -->
+                
+
+                <!--Third Slider Start -->
+                    <!-- Reviews -->
+    <section class="home-review observable">
+        <!--for third slider  -->
+        <div id='home-love-slider-progress'>
+        </div>
+        <!--for third slider  -->
+        <div class="wrapper-1440">
+            
+
+            <div class="slider-container" id="home-review-slider" data-total="3">
+
+                <!-- Slider nav -->
+                <div class="slider-nav">
+                    <div class="slider-nav-container">
+                        <div class="slider-nav-buttons">
+                            <div class="slider-nav-item slider-nav-item-next" id="home-review-slider-next">
+                                <div class="slider-nav-item-icon-container">
+                                    <span class="slider-nav-item-icon-1"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                                    <span class="slider-nav-item-icon-2"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                                </div>
+                            </div>
+                            <div class="slider-nav-item slider-nav-item-prev" id="home-review-slider-prev">
+                                <div class="slider-nav-item-icon-container">
+                                    <span class="slider-nav-item-icon-1"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                                    <span class="slider-nav-item-icon-2"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-nav-pagination">
+                            <span class="slider-nav-page">01</span>
+                            <span class="slider-nav-total">03</span>
+                        </div>
+                        <!-- Progress bar -->
+                        <div class="slider-progress slider-nav-progress" id='home-review-slider-progress'>
+                            <div class="slider-progress-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-review-slider-slides">
+                                            <div class="home-review-slider-item active">
+                            <div class="home-review-slider-card">
+                                <div class="home-review-slider-card-bg img-lazyload-container">
+                                    <img class="img-lazyload" data-lazyload="true" src="../photos.altai-travel.com/960x400/paysage-de-montagnes-en-islande-massif-de-kerlingarfjoell-445.jpg"
+                                        alt="Paysage de montagnes en Islande, massif de Kerlingarfjöll" title="Paysage de montagnes en Islande, massif de Kerlingarfjöll - &copy; Pixa Bay">
+                                </div>
+                                <div class="home-review-slider-card-map img-lazyload-container">
+                                    <img class="img-lazyload" data-lazyload="true" src="front/img/others/svg/map-countries/islande.svg" alt=" - 66° Nord">
+                                </div>
+                                <div class="home-review-slider-card-content">
+                                                                            <div class="home-review-slider-card-stars">
+                                            <div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+                                        </div>
+                                                                        <h4 class="home-review-slider-card-name"><strong>MICHEL,</strong>
+                                        66 ans, VALENCE</h4>
+                                    <p class="home-review-slider-card-travel">Islande - Le Grand Tour de l'Islande</p>
+                                    <p class="home-review-slider-card-txt">circuit bien organisé qui permet d'avoir un bon aperçu du pays et professionnalisme du guide</p>
+                                    <div class="home-review-slider-card-details">
+                                                                                    <div class="home-review-slider-card-detail">
+                                                <svg class="icon icon-randonnee">   <use xlink:href="#randonnee" /></svg>
+                                                Randonnée
+                                            </div>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="home-review-slider-item ">
+                            <div class="home-review-slider-card">
+                                <div class="home-review-slider-card-bg img-lazyload-container">
+                                    <img class="img-lazyload" data-lazyload="true" src="../photos.altai-travel.com/960x400/voyage-dans-les-iles-lofoten-en-norvege-du-nord-72.jpg"
+                                        alt="Voyage dans les iles lofoten en Norvège du Nord" title="Voyage dans les iles lofoten en Norvège du Nord - &copy; Basmaji Rémi">
+                                </div>
+                                <div class="home-review-slider-card-map img-lazyload-container">
+                                    <img class="img-lazyload" data-lazyload="true" src="front/img/others/svg/map-countries/norvege.svg" alt=" - 66° Nord">
+                                </div>
+                                <div class="home-review-slider-card-content">
+                                                                            <div class="home-review-slider-card-stars">
+                                            <div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-empty">    <use xlink:href="#star-empty" /></svg></div>
+                                        </div>
+                                                                        <h4 class="home-review-slider-card-name"><strong>JEAN-MARC,</strong>
+                                        52 ans, ANDERLECHT</h4>
+                                    <p class="home-review-slider-card-travel">Norvège - Entre montagnes et fjords dans les iles Lofoten</p>
+                                    <p class="home-review-slider-card-txt">Niveau plus élevé que modéré et pluies très présentes à partir du 15 août (les Norvégiens ne s'y trompent pas, la saison d'été se termine à la mi-août!)</p>
+                                    <div class="home-review-slider-card-details">
+                                                                                    <div class="home-review-slider-card-detail">
+                                                <svg class="icon icon-trek">    <use xlink:href="#trek" /></svg>
+                                                Trek
+                                            </div>
+                                                                                    <div class="home-review-slider-card-detail">
+                                                <svg class="icon icon-randonnee">   <use xlink:href="#randonnee" /></svg>
+                                                Randonnée
+                                            </div>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="home-review-slider-item ">
+                            <div class="home-review-slider-card">
+                                <div class="home-review-slider-card-bg img-lazyload-container">
+                                    <img class="img-lazyload" data-lazyload="true" src="../photos.altai-travel.com/960x400/paysage-de-montagnes-en-islande-massif-de-kerlingarfjoell-445.jpg"
+                                        alt="Paysage de montagnes en Islande, massif de Kerlingarfjöll" title="Paysage de montagnes en Islande, massif de Kerlingarfjöll - &copy; Pixa Bay">
+                                </div>
+                                <div class="home-review-slider-card-map img-lazyload-container">
+                                    <img class="img-lazyload" data-lazyload="true" src="front/img/others/svg/map-countries/islande.svg" alt=" - 66° Nord">
+                                </div>
+                                <div class="home-review-slider-card-content">
+                                                                            <div class="home-review-slider-card-stars">
+                                            <div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-full"> <use xlink:href="#star-full" /></svg></div>
+<div class="home-review-slider-card-star"><svg class="icon icon-star-empty">    <use xlink:href="#star-empty" /></svg></div>
+                                        </div>
+                                                                        <h4 class="home-review-slider-card-name"><strong>JEAN,</strong>
+                                        57 ans, ERMONT</h4>
+                                    <p class="home-review-slider-card-travel">Islande</p>
+                                    <p class="home-review-slider-card-txt">Un réveillon dépaysant à Reykjavik. Tout est bien organisé, le transfert, l'hôtel bien situé, les excursions. Les excursions en décembre sont intéressantes mais un peu décevantes par manque de lumière (photos de paysages quasi impossibles). Par contre le 31/12, les feux d'articifice valent le voyage en famille. La conseillère de 66 Nord a été efficace.</p>
+                                    <div class="home-review-slider-card-details">
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                                        <div class="home-review-all">
+                        <a href="avis-clients.html" class="all-button change-page">
+                            <span class="all-button-inner">Tous les avis</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                <!--Third Slider End -->
+
+
+                <!--Four Slider Start  -->
+
+
+
+                             <section class="home-love observable">
+        <div class="home-love-slider" id="home-love-slider" data-total="3">
+
+                            <div class="home-love-bg img-lazyload-container active">
+                    <img class="img-lazyload" data-lazyload="true" data-width="1920" data-height="680" src="../photos.altai-travel.com/1920x680/raquettes-pulka-au-spitzberg-en-hiver-161.jpg"
+                         alt="Raquettes pulka au Spitzberg en hiver" title="Raquettes pulka au Spitzberg en hiver - &copy; Letecheur Samuel">
+                </div>
+                            <div class="home-love-bg img-lazyload-container ">
+                    <img class="img-lazyload" data-lazyload="true" data-width="1920" data-height="680" src="../photos.altai-travel.com/1920x680/chevaux-islandais-voyage-en-islande-printemps-185.jpg"
+                         alt="Chevaux islandais, voyage en Islande printemps" title="Chevaux islandais, voyage en Islande printemps - &copy; Van Rooy Charl">
+                </div>
+                            <div class="home-love-bg img-lazyload-container ">
+                    <img class="img-lazyload" data-lazyload="true" data-width="1920" data-height="680" src="../photos.altai-travel.com/1920x680/chien-de-traineau-en-laponie-finlande-23.jpg"
+                         alt="Chien de traineau en Laponie, Finlande" title="Chien de traineau en Laponie, Finlande - &copy; Ours Jc">
+                </div>
+            
+            <div class="home-love-slider-nav slider-nav-buttons">
+                <div class="slider-nav-item slider-nav-item-next" id="home-love-slider-next">
+                    <div class="slider-nav-item-icon-container">
+                        <span class="slider-nav-item-icon-1"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                        <span class="slider-nav-item-icon-2"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                    </div>
+                </div>
+                <div class="slider-nav-item slider-nav-item-prev" id="home-love-slider-prev">
+                    <div class="slider-nav-item-icon-container">
+                        <span class="slider-nav-item-icon-1"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                        <span class="slider-nav-item-icon-2"><svg class="icon icon-fleche"> <use xlink:href="#fleche" /></svg></span>
+                    </div>
+                </div>
+            </div>
+
+                            <div class="home-love-slider-item active">
+                    <div class="wrapper-640">
+                        <h2 class="home-love-top">
+                            <span class="title-sub">Nos coups de coeur</span>
+                            <span class="title-1">En ski sur la Banquise</span>
+                        </h2>
+                        <div class="home-love-tab">
+                            <div class="home-love-tab-head">
+                                <div class="home-love-tab-item">Destination</div>
+                                <div class="home-love-tab-item">Nom du voyage</div>
+                                <div class="home-love-tab-item">Type de voyage</div>
+                            </div>
+                                                                                        <a href="vacances-spitzberg/voyage-le-glacier-von-post/ENSPSK1.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Spitzberg</div>
+                                    <div class="home-love-tab-item">Le glacier Von Post</div>
+                                    <div class="home-love-tab-item">Voyage accompagné</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                            <a href="vacances-groenland/voyage-magie-hivernale-au-groenland/EGROL7.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Groenland</div>
+                                    <div class="home-love-tab-item">Magie hivernale au Groenland</div>
+                                    <div class="home-love-tab-item">Individuel &amp; sur-mesure</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                            <a href="vacances-groenland/voyage-pulka-en-baie-de-disko-objectif-inlandsis/EGROSKD.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Groenland</div>
+                                    <div class="home-love-tab-item">Pulka en baie de Disko : objectif inlandsis</div>
+                                    <div class="home-love-tab-item">Voyage accompagné</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                    </div>
+                        <div class="home-love-bottom">
+                            <a href="activites-vacances/voyage-ski/14.html" class="change-page button button-white">Voir les voyages</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="home-love-slider-item ">
+                    <div class="wrapper-640">
+                        <h2 class="home-love-top">
+                            <span class="title-sub">Nos coups de coeur</span>
+                            <span class="title-1">Printemps en Islande</span>
+                        </h2>
+                        <div class="home-love-tab">
+                            <div class="home-love-tab-head">
+                                <div class="home-love-tab-item">Destination</div>
+                                <div class="home-love-tab-item">Nom du voyage</div>
+                                <div class="home-love-tab-item">Type de voyage</div>
+                            </div>
+                                                                                        <a href="vacances-islande/voyage-cote-sud-entre-ciel-et-mer/EISLD1.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Islande</div>
+                                    <div class="home-love-tab-item">Côte sud entre ciel et mer</div>
+                                    <div class="home-love-tab-item">Individuel &amp; sur-mesure</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                            <a href="vacances-islande/voyage-la-boucle-islandaise/EISH.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Islande</div>
+                                    <div class="home-love-tab-item">La boucle islandaise</div>
+                                    <div class="home-love-tab-item">Voyage accompagné</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                            <a href="vacances-islande/voyage-printemps-islandais-decouverte-de-la-cote-sud-et-des-iles-vestmann/EISL8V.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Islande</div>
+                                    <div class="home-love-tab-item">Printemps islandais : découverte de la côte sud et des Iles Vestmann</div>
+                                    <div class="home-love-tab-item">Voyage accompagné</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                    </div>
+                        <div class="home-love-bottom">
+                            <a href="pays/voyage-islande/170.html" class="change-page button button-white">Voir les voyages</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="home-love-slider-item ">
+                    <div class="wrapper-640">
+                        <h2 class="home-love-top">
+                            <span class="title-sub">Nos coups de coeur</span>
+                            <span class="title-1">Magie de la Finlande</span>
+                        </h2>
+                        <div class="home-love-tab">
+                            <div class="home-love-tab-head">
+                                <div class="home-love-tab-item">Destination</div>
+                                <div class="home-love-tab-item">Nom du voyage</div>
+                                <div class="home-love-tab-item">Type de voyage</div>
+                            </div>
+                                                                                        <a href="vacances-finlande/voyage-immersion-hivernale-en-terre-same/EFINL4.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Finlande</div>
+                                    <div class="home-love-tab-item">Immersion hivernale en terre same</div>
+                                    <div class="home-love-tab-item">Individuel &amp; sur-mesure</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                            <a href="vacances-finlande/voyage-evasion-boreale/EFINA7HV.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Finlande</div>
+                                    <div class="home-love-tab-item">Evasion Boréale</div>
+                                    <div class="home-love-tab-item">Voyage accompagné</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                            <a href="vacances-finlande/voyage-la-finlande-grandeur-nature/EFINA3.html" class="home-love-tab-line change-page">
+                                    <div class="home-love-tab-item">Finlande</div>
+                                    <div class="home-love-tab-item">La Finlande Grandeur Nature</div>
+                                    <div class="home-love-tab-item">Voyage accompagné</div>
+                                    <div class="home-love-tab-arrow">
+                                        <svg class="icon icon-fleche">  <use xlink:href="#fleche" /></svg>
+                                    </div>
+                                </a>
+                                                    </div>
+                        <div class="home-love-bottom">
+                            <a href="pays/voyage-finlande/134.html" class="change-page button button-white">Voir les voyages</a>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+
+        <!-- Progress bar -->
+        <div class="slider-progress home-love-slider-progress" id='home-love-slider-progress'>
+            <div class="slider-progress-inner"></div>
+        </div>
+    </section>
+
+
+                <!--Four Slider Start  -->
+            </section>
+            <!-- main section -->
+            <!-- Cookie For Both Slider and this cookie delete so slider not run-->
+                <div id="cookie" style="display: none">
+                   
+                </div>
+            <!-- Cookie end-->
+        </div> <!-- End #main-container -->
+<!-- JS -->
+<script>
+    /* JS vars */
+    var STF_Config		= {
+        ALL_LANG: ['fr'],
+        CREDITS: {
+            author: 'Quest',
+            authorUrl: 'www.questglt.com',
+            color1: '#000',
+            color2: '#fff',
+            color3: '#f91d65'
+        },
+        ENVS: {
+            base_url: '/',
+            assets_base_url: '/front/'
+        },
+        GA_ID: JSON.parse('\x7B"default":"UA-7727234-1"\x7D'),
+        IS_PROD: true,
+        NEED_PAGE_ID: true
+    };
+    var STF_Device		= JSON.parse( '\x7B\x22HAS_MOBILE_VERSION\x22\x3Afalse,\x22TABLET_VERSION\x22\x3A\x22desktop\x22,\x22FORCE_DEVICE\x22\x3Afalse,\x22DEVICE\x22\x3A\x22desktop\x22,\x22IS_DESKTOP\x22\x3Atrue,\x22IS_TABLET\x22\x3Afalse,\x22IS_MOBILE\x22\x3Afalse,\x22BROWSER\x22\x3A\x22Curl\x22,\x22BROWSER_VERSION\x22\x3A\x227.54.0\x22,\x22BROWSER_ENGINE\x22\x3A\x22\x22,\x22IS_OLD_BROWSER\x22\x3Afalse,\x22IS_IE\x22\x3Afalse,\x22IS_EDGE\x22\x3Afalse\x7D' );
+    var STF_JS_VIEWS_ID	= JSON.parse( 'null' );
+
+    /* Reset img's src tag to stop loading */
+    var STF_resetImgs = function( $imgs ) {
+        var $img, src;
+        for ( var i = 0; i < $imgs.length; i++ ) {
+            $img		= $imgs[i];
+            src			= $img.src;
+            $img.src	= '';
+            $img.src	= src;
+            $img.setAttribute( 'data-src' , src );
+        }
+    };
+    // Filter only img-lazyload for header-transition
+    STF_resetImgs( document.querySelectorAll( 'img.img-lazyload' ) );
+</script>
+<script src="front/js/header.min.js"></script>
+<script src="front/js/script-slider.js"></script>
+</body>
+</html>

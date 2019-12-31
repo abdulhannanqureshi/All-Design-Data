@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/intlTelInput.css" media="all" /> <!-- for country code ,one css file -->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/intlTelInput.js"></script> <!-- for country code ,one js file -->
+<style> /*add two flag images*/
+.iti-flag {
+	background-image: url("img/flags.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti-flag {background-image: url("img/flags@2x.png");}
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<input type="tel" id="phone"><!--  one filed -->
+<script>
+	// for Country code
+  	var input = document.querySelector("#phone");
+  	window.intlTelInput(input);
+</script> 
+</div><!-- /#wrapper -->
+</body>
+</html>

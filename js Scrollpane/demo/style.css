@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+ * style.css
+ *
+ *  version --- 1.0
+ *  updated --- 2013/5/10
+ */
+
+
+#wrapper {
+	width: 900px;
+	margin: 100px auto;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.jscrollpane {
+	padding: 10px;
+	height: 200px;
+	overflow: hidden;
+	margin: 0;
+	border: 1px solid #000;
+}

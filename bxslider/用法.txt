@@ -1,0 +1,28 @@
+﻿meta：
+<link rel="stylesheet" type="text/css" href="路径/jquery.bxslider.css">
+<script type="text/javascript" src="路径/jquery.bxslider.js"></script>
+
+js：
+<script type="text/javascript">
+	$(function(){
+		$('.bxslider').bxSlider({  //常见参数
+			mode: 'fade',  //slider方法 “horizontal”：滚动；“fade”：淡入淡出
+			speed: 2000,   //slider滚动时间，
+			pause: 5000,   //slider滚动间隔时间
+			auto:true,     //自动滚动 “true”：自动；“false”：手动
+			controls:false,//控制器（左右剪头）true”：有；“false”：没有
+			pager:false,  //控制器（小点点）true”：有；“false”：没有
+			minSlides: 1,  //最小显示个数
+			maxSlides: 1,  //最大显示个数
+			moveSlides: 0, //单次滚动个数
+			slideWidth: 0  //每个单元宽度
+		});
+	});
+</script>
+
+html：
+<ul class="bxslider">
+	<li><img src="img/img_slider_top01.jpg" alt="写真"></li>
+	<li><img src="img/img_slider_top02.jpg" alt="写真"></li>
+	<li><img src="img/img_slider_top03.jpg" alt="写真"></li>
+</ul>

@@ -1,0 +1,6 @@
+meta：
+<script type="text/javascript" src="路径/smartphone.js"></script>
+
+
+html：
+<a href="sample.html" rel="alternate">Text</a>

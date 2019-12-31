@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script> <!-- for valition  -->
+<style>
+	#wrapper{
+		max-width:600px;
+		margin:300px auto;
+	}
+	.m-bottom-30{
+		margin-bottom: 30px;
+	}
+	/*for error message class*/
+	.error_validate{
+		color: red;
+		display: block;
+	}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<form id="validate-me-plz">
+	    <div class="m-bottom-30">
+	        Text: <input type="text" name="firstName" data-rule-required="true" />
+	    </div>
+	    <div class="m-bottom-30">
+            Required w/custom message: <input type="text" name="required-sassy" data-rule-required="true" data-msg-required="Please enter SOMETHING." />
+        </div>
+	    <div class="m-bottom-30">
+	        Email: <input type="email" name="email" data-rule-required="true" data-rule-email="true" data-msg-required=" re SOMETHING." data-msg-email="re email"/>
+	    </div>
+		
+		<div>		
+			<label for="nomination_start_date">Nomination Start Date<span class="maditory_star">*</span></label>
+				<div class="input-group">
+               		<input type="text" class="form-control datepicker_time" placeholder="Nomination start Date" name="nomination_start_date" id="nomination_start_date" value="" data-rule-required="true" data-msg-required="Select nomination start date." autocomplete="off" />
+            	</div>
+            	<!-- <span for="nomination_start_date" class="error_validate"></span> --> <!-- create this span automatically   -->
+		</div>
+		<div class="m-bottom-30">
+			<input type="submit" value="Submit" />
+		</div>
+	</form>
+		</div>
+	
+<!-- for validation -->
+<script>
+	$('#validate-me-plz').validate({
+		ignore: [],
+        onfocusout: function(element) {
+        this.element(element);
+        },
+        errorClass: 'error_validate',
+        errorElement:'span',
+        highlight: function(element, errorClass) {
+        $(element).removeClass(errorClass);
+
+        }
+	});
+</script>
+<!-- for validation -->
+</div><!-- /#wrapper -->
+</body>
+</html>

@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*
+ * style.css
+ *
+ *  version --- 1.0
+ *  updated --- 2013/5/10
+ */
+
+ul {
+	list-style: none;
+}
+p,div.ul,li {
+	padding: 0;
+	margin: 0;
+}
+#wrapper {
+	width: 100%;
+	margin: 100px auto;
+}
+
+.masonry {
+	width: 100%;
+}
+.box01 {
+	width: 100px;
+	border: 1px solid #000;
+	height: 100px;
+	box-sizing: border-box;
+}
+.box02 {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+.box03 {
+	width: 400px;
+	height: 400px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+.box04 {
+	width: 300px;
+	height: 300px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+
+
+
+.blue {
+	background: #00f;
+}
+.red {
+	background: #f00;
+}
+.yellow {
+	background: #0ff;
+}
+.green {
+	background: #0f0;
+}

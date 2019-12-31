@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+#mainimg01 {
+	margin: 60px 0 78px;
+	position: relative;
+}
+#mainimg01 .slick-slide img{
+	width: 100%;
+}
+/*------margin between two images------*/
+.slick-slide{
+	margin:0 30px;
+}
+p{
+	margin: 0;
+	padding:0;
+}

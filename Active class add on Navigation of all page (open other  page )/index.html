@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+<nav class="navbar navbar-expand-sm bg-light text-center">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li>
+  </ul>
+</nav>
+<script>
+	$(document).ready(function(){
+
+  $('.navbar ul li a').each(function() {
+  	var url = $(location).attr('href'),
+        parts = url.split("/"),
+        loc = parts[parts.length-1];
+      if ($(this).attr('href') == url) {
+        $(this).parent('li').addClass('active');
+      }
+  });
+    
+});
+</script>	
+</div><!-- /#wrapper -->
+</body>
+</html>

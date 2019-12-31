@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style>
+	.read-more-btn{
+	font-size: 15px;
+    color: #0055a6;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.read-more-btn:focus{
+    color: #0055a6;
+}
+.more-content{
+	display: none;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+<div class="more-content">
+	Lorem ipsume had morebegain the ganlogic able formed Lorem ipsume had morebegain the ganlogic able formed Lorem ipsume had morebegain the ganlogic able formed Lorem ipsume had morebegain the ganlogic able formed Lorem ipsume had morebegain the ganlogic able formed Lorem ipsume had morebegain the ganlogic able formed Lorem ipsume had morebegain the ganlogic able formed Lorem ipsume had morebegain the ganlogic able formed  
+</div> 
+<div class="read-more">
+	<a href="javascript:void(0)" class="read-more-btn"> Read More</a>
+</div>
+<!-- Raed More and Less -->
+<script>
+    $(document).ready(function(){
+        $('.read-more a').click(function(){
+            $(this).text($(this).text() == 'READ LESS' ? 'READ MORE' : 'READ LESS');
+            $(".more-content").slideToggle(300);
+        });
+    });
+</script>
+</div><!-- /#wrapper -->
+</body>
+</html>

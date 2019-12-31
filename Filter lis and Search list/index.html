@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style>
+	#main{
+		margin:50px;
+	}
+*{
+	margin: 0;
+	padding: 0;
+}
+.searchField{
+	position: relative;
+  	margin-bottom: 12px;
+}
+.searchField:after{
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translate(0,-50%);
+	z-index: 999;
+	content: "";
+	font-size: 22px;
+	font-family: 'Glyphicons Halflings';
+	content: "\e003";
+}
+
+
+
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#myInput").click(function(){
+			$("#myUL").toggle(300);
+		});		
+	});
+</script>
+</head>
+<body>
+<div id="wrapper">
+	
+	<article>
+		<div id="contents">
+			<div id="main" class="container">
+				
+
+			<p class="searchField"><input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search for names.." title="Type in a name"></p>
+
+			<ul id="myUL">
+			  <li><a href="#">Adele</a></li>
+			  <li><a href="#">Agnes</a></li>
+
+			  <li><a href="#">Billy</a></li>
+			  <li><a href="#">Bob</a></li>
+
+			  <li><a href="#">Calvin</a></li>
+			  <li><a href="#">Christina</a></li>
+			  <li><a href="#">Cindy</a></li>
+			</ul>
+				
+
+
+
+			</div><!-- /#main -->	
+		</div><!-- /#contents -->
+	</article>	
+</div><!-- /#wrapper -->
+<script>
+function myFilter() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>

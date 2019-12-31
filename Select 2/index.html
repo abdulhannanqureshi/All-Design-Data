@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+
+<link href="css/select2.min.css" rel="stylesheet"> <!-- for Select 2 -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/select2.full.min.js"></script><!-- for Select 2 -->
+</head>
+<body>
+<div id="wrapper">
+<div class="form-group">
+  <label for="sel1">Select list:</label>
+  <select class="form-control il" id="sel1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+</div>
+
+<!-- for select 2 -->
+<script>
+    $(document).ready(function(){
+        $('.il').select2();
+    });
+</script>
+<!-- for select 2 -->
+</div><!-- /#wrapper -->
+</body>
+</html>

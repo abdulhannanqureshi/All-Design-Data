@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+<script>
+	function getUrl(){
+		var url = $(location).attr('href'),
+		parts = url.split("/"),
+		loc = parts[parts.length-1];
+		$('#gNavi').find('a').each(function() {
+			var aHref =  $(this).attr('href'),
+			aparts =  aHref.split("/"),
+			aloc = aparts[aparts.length-1];
+			if( loc == aloc){
+				$(this).addClass('active');
+			} 
+		});
+	}
+	getUrl();
+</script>
+</div><!-- /#wrapper -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+meta：
+<script type="text/javascript" src="路径/jquery.biggerlink.min.js"></script>
+
+js：
+<script type="text/javascript">
+	$(function(){
+		if($('.biggerlink').length > 0){
+			$('.biggerlink').biggerlink();
+		}
+	});
+</script>
+
+html：
+<div class=" biggerlink">
+	<p class="typeA">キャンペーン</p>
+	<div class="campaignListBox">
+		<p class="ttl">待望の「86」レンタカーで登場!</p>
+		<p class="btnDetail"><a href="campaign_detail.html">詳しくみる</a></p>
+		<p class="update">更新日：2015/01/30</p>
+	</div><!-- /.campaignListBox -->
+</div>

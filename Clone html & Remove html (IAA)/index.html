@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+
+<div id="tax_type">
+                    <h3 class="subTitle black-clr font-size-22 m-bottom-20">GST Tax</h3>
+                    <div id="attribute_section_add_main">
+                        <div class="" id="attribute_section_add">
+                            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                                <select class="form-control" id="tax-type">
+                                    <option value="">SGST</option>
+                                    <option value="">CGST</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                                <input type="text" name="" id="tax-percent" class="form-control" placeholder="Enter Tax in Percent">
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                                <input type="text" name="" id="tax-amount" class="form-control" placeholder="2700 (SGST)">
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                                <a href="javascript:void(0);" class="btn btn-primary btn-green" title="Add" onclick="attribute_cloning_add();">
+                                    Add
+                                </a>
+                                <a  href="javascript:void(0);" id="attribute_cloning" class="btn btn-primary btn-red" title="Remove" onclick="remove_current_div_venues($(this));">
+                                   Remove
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- for Clone by click Add button -->
+<script>
+var countval = 1; //for Increase id num  
+function attribute_cloning_add(){
+    
+    var new_count = countval++; //for increase id number
+
+    // both for change id  
+    $clone1 = $("#attribute_section_add").clone();
+    $clone1.attr('id','attribute_section_add'+new_count);
+    
+    $clone1.find('#tax-type').attr('id','tax-type'+new_count); //for increase id number
+    $clone1.find('#tax-percent').attr('id','tax-percent'+new_count); //for increase id number
+    $clone1.find('#tax-amount').attr('id','tax-amount'+new_count); //for increase id number
+   
+    $('#attribute_section_add_main').append($clone1); //for append Clone Data
+}
+</script>
+<!-- Remove Clone by Click Minus Button -->
+<script>
+    
+    function remove_current_div_venues(obj){
+        var parent_id = obj.parent().parent().attr('id'); //for parent ID
+        if( parent_id != 'attribute_section_add'){
+            obj.parent().parent().remove(); 
+        }    
+    }
+</script>
+</div><!-- /#wrapper -->
+</body>
+</html>

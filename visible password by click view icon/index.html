@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+<input type="password" id="pass">
+<span class="visible-icon-wrap"><i class="far fa-eye hide-pass"></i></span>
+<script>
+	$(document).ready(function(){
+		$('.visible-icon-wrap').click(function(){
+		    if('password' == $('#pass').attr('type')){
+		        $('#pass').prop('type', 'text');
+		        $('.hide-pass').toggleClass('fa-eye-slash fa-eye');
+		    }
+		    else{
+		        $('#pass').prop('type', 'password');
+		        $('.hide-pass').toggleClass('fa-eye-slash fa-eye');
+		    }
+		});
+	});
+</script>	
+</div><!-- /#wrapper -->
+</body>
+</html>

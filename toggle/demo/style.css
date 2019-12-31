@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*
+ * style.css
+ *
+ *  version --- 1.0
+ *  updated --- 2013/5/10
+ */
+
+
+#wrapper {
+	width: 900px;
+	margin: 100px auto;
+}
+
+.toggle {
+}
+.toggle dt {
+	font-size: 18px;
+	padding: 20px 30px 20px 20px;
+	display: block;
+	background: #01173d;
+	position: relative;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+.toggle dt:before {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -16px;
+	width: 33px;
+	height: 33px;
+	z-index: 2;
+	background: url(ico_open.png) 0 0 no-repeat;
+	content: "";
+}
+.toggle dt.on:before {
+	background: url(ico_close.png) 0 0 no-repeat;
+}
+.toggle dd {
+	display: none;
+	padding: 20px 30px 20px 20px;
+	font-size: 16px;
+	margin: 0;
+}

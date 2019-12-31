@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- For google Chart -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	  <div id="donutchart" style="width: 900px; height: 600px;"></div>
+</div><!-- /#wrapper -->
+
+<svg>
+  <style type="text/css">
+    svg g:nth-child(4) path:first-child{
+        fill:url(#MyGradient1)
+    }
+  </style>
+   <defs>
+    <linearGradient id="MyGradient1">
+      <stop offset="20%" stop-color="#FCC230" />
+      <stop offset="80%" stop-color="#F58233" /> 
+    </linearGradient>
+  </defs>
+</svg>
+<svg>
+  <style type="text/css">
+    svg g:nth-child(5) path:first-child{
+        fill:url(#MyGradient2);
+    }
+  </style>
+<defs>
+    <linearGradient id="MyGradient2">
+      <stop offset="0%" stop-color="#FE7C9C" />
+      <stop offset="100%" stop-color="#F40B9A" /> 
+    </linearGradient>
+  </defs>
+</svg>
+<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Feedback', 'Feedback Percentage'],
+          ['Good',    40],
+          ['Bad',      60],
+        ]);
+        var options = {
+            title: 'Overall App Feedback',
+            pieHole: 0.6,
+            legend: {position: 'none'},
+            pieSliceText: 'label',
+            slices: {  0: {offset: 0},
+                    1: {offset: 0.03}
+          },
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+</body>
+</html>

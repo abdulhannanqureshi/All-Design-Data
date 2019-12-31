@@ -1,0 +1,29 @@
+meta：
+<script type="text/javascript" src="路径/heightLine.js"></script>
+
+
+html：
+<div class="contents hld-a">
+	<div class="contents hld-a-1">
+		.
+		.
+		.
+	</div>
+	<div class="contents hld-a-1">
+		.
+		.
+		.
+	</div>
+</div>
+<div class="contents hld-b">
+	<div class="contents hld-b-1">
+		.
+		.
+		.
+	</div>
+	<div class="contents hld-b-1">
+		.
+		.
+		.
+	</div>
+</div>

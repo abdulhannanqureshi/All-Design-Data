@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
+ * style.css
+ *
+ *  version --- 1.0
+ *  updated --- 2013/5/10
+ */
+
+
+#wrapper {
+	width: 900px;
+	margin: 100px auto;
+}
+.radioBox {
+	padding: 5px 0;
+}
+.radioBox label {
+	display: block;
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+}
+.radioBox label span {
+	display: block;
+	background: url(ico_radio01_no.png) 0 0 no-repeat;
+	background-size: 23px 23px;
+	padding:3px 10px 3px 30px;
+	font-size: 14px;
+	line-height: 1.4;
+}
+.radioBox label span.on {
+	background-image: url(ico_radio01_on.png) !important;
+	
+}
+.radioBox input[type=radio] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	-moz-opacity:0.0001;
+	opacity:0.0001;
+	width: 23px;
+	height: 23px;
+}

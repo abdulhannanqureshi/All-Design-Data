@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+
+<link href="css/fSelect.css" rel="stylesheet"> <!-- for f select -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/fSelect.js"></script>  <!-- for f select -->
+<style>
+    .inner{
+        max-width: 640px;
+        margin: 100px auto;
+    }
+</style>
+</head>
+<body> 
+<div id="wrapper">
+    <div class="inner">
+        <select class="demo" multiple="multiple">
+            <optgroup label="Languages">
+              <option value="cp">C++</option>
+              <option value="cs">C#</option>
+              <option value="oc">Object C</option>
+              <option value="c">C</option>
+          </optgroup>
+          <optgroup label="Scripts">
+              <option value="js">JavaScript</option>
+              <option value="php">PHP</option>
+              <option value="asp">ASP</option>
+              <option value="jsp">JSP</option>
+          </optgroup>
+        </select>
+    </div>
+    <script>
+        $('.demo').fSelect();
+    </script>
+</body>
+</html>

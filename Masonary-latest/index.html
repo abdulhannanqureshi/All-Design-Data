@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bootstrap.js"></script>
+<style>
+	
+.gallery {
+  /* https://tobiasahlin.com/blog/masonry-with-css/ */
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  overflow: hidden;
+  height: 200vw;
+  /* Re-order items into rows */
+  /* Force new columns */
+}
+.gallery .gallery-image {
+  width: 33.3%;
+}
+.gallery .gallery-image[data-flipping] {
+  opacity: 1;
+  z-index: 3;
+}
+.gallery .gallery-image:nth-child(3n+1) {
+  order: 1;
+}
+.gallery .gallery-image:nth-child(3n+2) {
+  order: 2;
+}
+.gallery .gallery-image:nth-child(3n) {
+  order: 3;
+}
+.gallery::before, .gallery::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+
+.gallery-image {
+  margin: 0;
+  display: block;
+  position: relative;
+}
+.gallery-image img {
+  display: block;
+  width: 100%;
+}
+.gallery-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-shadow: 0 0 1px #000;
+  opacity: 0.8;
+  padding: 1em;
+  text-align: left;
+  transition: opacity .4s linear;
+  font-family: monospace;
+}
+.gallery-image:hover figcaption {
+  opacity: 1;
+}
+
+.detail {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(25, 25, 25, 0);
+  box-shadow: 0 0 30px #000;
+  display: flex;
+  pointer-events: none;
+  transition: background .3s linear;
+}
+.detail .gallery-image {
+  padding: 5vmin;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail .gallery-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.detail .gallery-image figcaption {
+  display: none;
+}
+
+[data-state="detail"] .detail {
+  background: rgba(25, 25, 25, 0.85);
+  pointer-events: auto;
+}
+[data-state="detail"] .detail .gallery-image {
+  opacity: 1;
+}
+
+[data-state="gallery"] .detail .gallery-image {
+  opacity: 0;
+  transition: none;
+}
+
+/* ---------------------------------- */
+body {
+  background: black;
+}
+
+#app {
+  pointer-events: none;
+}
+#app .gallery .gallery-image {
+  pointer-events: auto;
+}
+
+.gallery-image {
+  transition: opacity .5s linear;
+}
+
+#app:hover .gallery .gallery-image {
+  opacity: 0.3;
+}
+#app:hover .gallery .gallery-image[data-flipping],
+#app:hover .gallery .gallery-image:hover {
+  opacity: 1;
+  transition-duration: .3s;
+}
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div id="app" data-state="gallery">
+  <div class="gallery">
+    <!--
+figure.gallery-image*30>img[src="https://source.unsplash.com/collection/2022043/700x900/?=$$"]+figcaption -->
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/CYEdgc-L6wM/800x800/" width="800" height="800" />
+      <figcaption>1</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/or3QAClfeaI/800x600/"  width="800" height="600" />
+      <figcaption>2</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/bjMHQUBZl1A/800x400/"  width="800" height="400" />
+      <figcaption>3</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/WxUInXYgAAk/800x600/"  width="800" height="600" />
+      <figcaption>4</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/F9wrh2miJLA/800x900/" width="800" height="900" />
+      <figcaption>5</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/-93ArahrTKc/800x600/"  width="800" height="600" />
+      <figcaption>6</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/mCW5DyBrWjg/800x700/"  width="800" height="700" />
+      <figcaption>7</figcaption>
+    </figure>
+
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/3Eax7IYlEyc/800x800/" width="800" height="800" />
+      <figcaption>8</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/8qEuawM_txg/800x600/" width="800" height="600" />
+      <figcaption>9</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/UY7R1QhCJ3c/800x800/" />
+      <figcaption>10</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/gdQnsMbhkUs/800x900/"  width="800" height="900" />
+      <figcaption>11</figcaption>
+    </figure>
+    <figure class="gallery-image">
+      <img src="https://source.unsplash.com/I5MxOB3g_tw/800x600/"  width="800" height="600" />
+      <figcaption>12</figcaption>
+    </figure>
+  </div>
+  <div class="detail">
+    <!--   cloned figure/image goes here!   -->
+  </div>
+</div>
+</div><!-- /#wrapper -->
+</body>
+</html>

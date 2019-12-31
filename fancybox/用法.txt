@@ -1,0 +1,37 @@
+
+将fancybox文件夹放到site的js文件夹中
+
+
+
+meta：
+<link rel="stylesheet" type="text/css" href="路径/js/fancybox/jquery.fancybox.css">
+
+<script type="text/javascript" src="路径/js/fancybox/jquery.fancybox.js"></script>
+
+js：
+<script type="text/javascript">
+	$(function(){
+		$('.fancybox').fancybox();
+	});
+</script>
+
+html：
+<p><a href="images/dummy04_l.jpg" class="fancybox"><img src="images/dummy04.jpg" alt="img"></a></p>
+
+
+SHIMADA
+
+KATO
+
+KAWAI
+
+SUZUNO
+
+YOSHIDA
+
+HATTORI
+
+asou
+
+
+pic_tamaplaza_asou

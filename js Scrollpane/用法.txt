@@ -1,0 +1,35 @@
+meta：
+<link rel="stylesheet" type="text/css" href="路径/jquery.jscrollpane.min.css">
+
+	<script type="text/javascript" src="路径/jquery-mousewheel.js"></script>
+	<script type="text/javascript" src="路径/jquery.jscrollpane.min.js"></script>
+
+js：
+<script type="text/javascript">
+	$(function(){
+		if($('.jscrollpane').length > 0)
+			$('.jscrollpane').jScrollPane();
+	});
+</script>
+
+html：
+<div class="jscrollpane">
+	<ul>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+		<li>ホームページリニューアルしました！</li>
+	</ul>
+<div>
+
+css:
+.jscrollpane {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
