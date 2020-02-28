@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style>
+	.aside-wrapper {
+	    max-width: 280px;
+	    background: #3a3183;
+	    min-height: 100vh;
+	    padding: 0;
+	}
+	.aside-wrapper li a{
+		text-decoration: none;
+		display: block;
+		padding: 12px 20px;
+    	color: #fff;
+    	border-bottom: solid 1px #fff;
+    }
+    .cus-sub-menu{
+		padding: 0;
+    }
+    .cus-sub-menu{
+    	display: none;
+    }
+    .aside-wrapper .cus-sub-menu li a{
+		padding-left:50px;
+    }
+</style>
+</head>
+<body>
+<div id="wrapper">
+<ul class="aside-wrapper">
+   	<li><a href="">Dashboard</a></li>
+   	<li><a href="javascript:void(0)" class="active">MyReflet ID Code</a>
+    	<ul class="cus-sub-menu">
+            <li><a href="#" class="active">Manage Category</a></li>
+            <li><a href="#">Manage Documents</a></li>
+            <li><a href="#">View MyReflet ID</a></li>
+    	</ul>
+  	</li>
+    <li><a href="javascript:void(0)" >Address Book</a>	
+        <ul class="cus-sub-menu">
+            <li><a href="#" class="active">Manage Category</a></li>
+            <li><a href="#">Manage Documents</a></li>
+            <li><a href="#">View MyReflet ID</a></li>
+        </ul>
+  	</li>
+</ul>
+</div><!-- /#wrapper -->
+ <script>
+            $(document).ready(function(){
+                $('.aside-wrapper > li > a').click(function(){
+                    if($(this).hasClass("on")){
+                        $(this).parent("li").find(".cus-sub-menu").slideUp(300);
+                        $('.aside-wrapper > li > a').removeClass("on");
+                    }
+                    else{
+                        $('.cus-sub-menu').slideUp(300);
+                        $(this).parent("li").find(".cus-sub-menu").slideDown(300);
+                        $('.aside-wrapper > li > a').removeClass("on");
+                        $(this).addClass("on");
+                    }
+                });
+            });
+        </script>
+</body>
+</html>

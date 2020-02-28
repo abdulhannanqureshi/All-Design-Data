@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- for loader -->
+<link rel="stylesheet" href="css/loading-bar.css"></script>
+<script src="js/loading-bar.js"></script>
+<style>
+    /*for main*/
+    .ldBar path.mainline {
+        stroke-width: 4;
+        stroke: #04519b;
+        stroke-linecap: round;
+    }
+    /*for base */
+    .ldBar path.baseline {
+        stroke-width: 3;
+        stroke: #28333f;
+        stroke-linecap: round;
+    }
+</style>
+</head>
+<body>
+<div id="wrapper" class="container">
+    <div class="loaderPercentage">
+        <div id="myItem1" class="ldBar label-center" data-preset="circle" data-value="0" stroke: red stroke-width: 10 ></div>
+    </div>
+<script>
+    /* construct manually */
+    var bar1 = new ldBar("#myItem1");
+    /* ldBar stored in the element */
+    var bar2 = document.getElementById('myItem1').ldBar;
+    bar1.set(100);
+</script>
+</div><!-- /#wrapper -->
+</body>
+</html>
