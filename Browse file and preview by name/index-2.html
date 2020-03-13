@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inout type file</title>
+</head>
+<body>
+	<input id="uploadFile" class="f-input" >
+<div class="fileUpload btn btn--browse">
+    <span>Browse</span>
+    <input id="uploadBtn" type="file" class="upload">
+</div>
+		
+<style type="text/css">
+	.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 100%;
+    height:100%;
+}
+
+.btn--browse{
+    border: 1px solid gray;
+    border-left: 0;
+	border-radius: 0 2px 2px 0;
+    background-color: #ccc;
+    color: black;
+    height: 22px;
+	padding: 10px 14px;
+}
+
+.f-input{
+	height: 42px;
+	background-color: white;
+	border: 1px solid gray;
+	width: 100%;
+	max-width: 400px;
+	float: left;
+	padding: 0 14px;
+}
+
+
+html { margin: 50px;}
+</style>
+
+<script>
+	document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value.replace("C:\\fakepath\\", "");
+};		
+</script>
+</body>
+</html>

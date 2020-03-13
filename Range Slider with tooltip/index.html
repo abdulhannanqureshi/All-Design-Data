@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style>
+.rang-wrapper {
+    width: 500px;
+	padding: 0 15px;
+}
+.rang-wrapper > div {
+    margin: 50px 0 15px;
+}
+.range-control {
+    position: relative;
+}
+.rangeSlider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #dddede;
+    border-radius: 3px;
+    outline: none;
+    transition: opacity .2s;
+}
+.range-control output {
+    position: absolute;
+    bottom: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 3px #cac4c4;
+    padding: 4px 8px;
+    min-width: 25px;
+    text-align: center;
+    border-radius: 4px;
+    display: none;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.week-amount {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.week-amount li {
+    width: 33.33%;
+}
+.week-amount li p{
+	position: relative;
+}
+.week-amount li:nth-child(2) {
+    text-align: center;
+}
+.week-amount li:nth-child(3) {
+    text-align: right;
+}
+.week-amount li:nth-child(1) p:after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 4px;
+    z-index: -1;
+    background: rgba(0,0,0,0.5);
+    width: 3px;
+    height: 15px;
+}
+.week-amount li:nth-child(2) p:after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    z-index: -1;
+    background: rgba(0,0,0,0.5);
+    width: 3px;
+    height: 18px;
+    transform: translateX(-50%);
+    margin-left: 2px;
+}
+.week-amount li:nth-child(3) p:after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 1px;
+    z-index: -1;
+    background: rgba(0,0,0,0.5);
+    width: 3px;
+    height: 15px;
+}
+.range-control output {
+    position: absolute;
+    bottom: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 3px #cac4c4;
+    padding: 4px 8px;
+    min-width: 25px;
+    text-align: center;
+    border-radius: 4px;
+    display: none;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.range-control output:after {
+    position: absolute;
+    content: "";
+    border-right: solid 6px transparent;
+    border-top: solid 6px #dddede;
+    border-left: solid 6px transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
+.range-control input[type=range]:active + output {
+    display: block;
+    transform: translateX(-50%);
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div class="rang-wrapper">
+    <div>
+         <div class="range-control">
+            <input id="inputRange" class="rangeSlider"  type="range" min="0" max="500" step="3" value="0" data-thumbwidth="20">
+            <output  id="slider_id" name="rangeVal">0</output>
+        </div>
+    </div>
+    <ul class="week-amount">
+        <li><p>0</p></li>
+        <li><p>500</p></li>
+        <li><p>1000</p></li>
+    </ul>
+</div>
+<script>
+$(document).ready(function(){
+	$('input[type="range"]').on('input', function() {
+		var control = $(this),
+	    controlMin = control.attr('min'),
+	    controlMax = control.attr('max'),
+	    controlVal = control.val(),
+	    controlThumbWidth = control.data('thumbwidth');
+		
+		var range = controlMax - controlMin;
+	  	var position = ((controlVal - controlMin) / range) * 100;
+		var positionOffset = Math.round(controlThumbWidth * position / 100) - (controlThumbWidth / 2);
+		var output = control.next('output');
+	  
+	  	output
+		    .css('left', 'calc(' + position + '% - ' + positionOffset + 'px)')
+		    .text(controlVal);
+		});
+});
+</script>
+</div><!-- /#wrapper -->
+</body>
+</html>

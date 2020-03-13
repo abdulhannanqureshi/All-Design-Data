@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- keyboard widget css & script (required) -->
+    <link href="css/keyboard.css" rel="stylesheet">
+    <script src="js/jquery.keyboard.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+<input id="text" type="text" placeholder=" Enter something...">
+</div><!-- /#wrapper -->
+<script>
+    // Autocomplete demo
+    var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure",
+    "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript",
+    "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme" ];
+
+    $('#text')
+        .keyboard({ layout: 'qwerty' })
+        .autocomplete({
+            source: availableTags
+    })
+    // position options added after v1.23.4
+    .addAutocomplete({
+        position : {
+            of : null,        // when null, element will default to kb.$keyboard
+            my : 'right top', // 'center top', (position under keyboard)
+            at : 'left top',  // 'center bottom',
+            collision: 'flip'
+        }
+    })
+    .addTyping();
+</script>
+</body>
+</html>

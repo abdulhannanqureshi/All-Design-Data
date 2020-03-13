@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Project</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style>
+#wrapper{
+	margin: 100px;
+}
+
+.browse-file-section{
+    position: relative;
+}
+.browse-file-section >input{
+    width: 100%;
+}
+.browse-file-section .form-control {
+    padding: 4px 12px;
+    box-sizing: border-box;
+    height: 42px;
+    border-radius: 0;
+}
+.browse-file-section button.browse.btn.btn-primary.input-lg {
+    padding: 4px 12px;
+    box-sizing: border-box;
+    height: 42px;
+    border-radius: 0;
+}
+
+.file-hidden{
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div class="col-sm-6">
+		<div class="browse-file-section">
+		    <input type="file" name="" class="file-hidden file">
+		    <div class="input-group">
+		        <input type="text" class="form-control" disabled="" placeholder="Upload Image">
+		        <span class="input-group-btn">
+		            <button class="browse btn btn-primary input-lg" type="button"><i class="fa fa-upload" aria-hidden="true"></i> Browse</button>
+		        </span>
+		    </div>
+		</div>
+	</div>
+</div><!-- /#wrapper -->
+<script>
+$(document).on('click', '.browse', function(){
+        var file = $(this).parent().parent().parent().find('.file');
+        file.trigger('click');
+    });
+    $(document).on('change', '.file', function(){
+        $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
+</script>	
+</body>
+</html>
